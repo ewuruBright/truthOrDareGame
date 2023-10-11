@@ -1,0 +1,128 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        margin: auto;
+        width: 300px;
+        box-shadow: 0px 1px 3px grey;
+        padding: 20px;
+    }
+
+    input {
+        border: none;
+        width: 100%;
+        padding: 30px;
+        outline: none;
+        background-color: whitesmoke;
+        direction: ltr;
+        text-align: right;
+        padding-bottom: 10px;
+    }
+
+    button {
+        width: 60px;
+        padding: 10px;
+        margin-bottom: 5px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    .sub {
+        margin-top: 14px;
+    }
+
+    #sum {
+        width: 72%;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <input type="text" placeholder="0"><br>
+        <div class="sub">
+            <button onclick="solve(1)">1</button>
+            <button onclick="solve(2)">2</button>
+            <button onclick="solve(3)">3</button>
+            <button onclick="solve('+')">+</button><br>
+            <button onclick="solve(4)">4</button>
+            <button onclick="solve(5)">5</button>
+            <button onclick="solve(6)">6</button>
+            <button onclick="solve('-')">-</button><br>
+            <button onclick="solve(7)">7</button>
+            <button onclick="solve(8)">8</button>
+            <button onclick="solve(9)">9</button>
+            <button onclick="solve('*')">*</button><br>
+            <button onclick="solve(0)">0</button>
+            <button onclick="solve('.')">.</button>
+            <button onclick="solve('/')">/</button>
+            <button onclick="cans()" class="cans">X</button>
+            <button onclick="clears()">C</button>
+            <button onclick="sums()" id="sum">=</button>
+        </div>
+
+    </div>
+    <!-- <input type="text"> -->
+    <script>
+        const input = document.querySelector('input')
+        const sum = document.querySelector('#sum');
+        var array, swap;
+
+        let joiner = ''
+
+        function solve(num) {
+            joiner += num
+            array = joiner.split('')
+            input.value = joiner
+        }
+
+        function sums() {
+            input.value = eval(joiner)
+            joiner = eval(joiner)
+
+        }
+
+        function clears() {
+            joiner = ''
+            input.value = ''
+        }
+
+        input.addEventListener('keyup', function (event) {
+            joiner = input.value
+            if (event.key == 'Enter') {
+                sums()
+            }
+        })
+
+     
+        function cans() {
+            array.pop()
+            joiner = array.join('')
+            input.value= joiner;
+
+        }
+
+        document.addEventListener('keypress', () => input.focus())
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,898 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(19, 18, 18, 0.952),rgba(47, 88, 45, 0.795),rgba(3, 3, 3, 0.952));
+
+}
+.same{
+    border-radius: 15px;
+}
+
+.general-container {
+    border-radius: 10px;
+    width: 370px;
+    height: 560px;
+    position: relative;
+    transform-style: preserve-3d;
+    border-radius: 15px;
+
+}
+
+.sub-container {
+    border-radius: 10px;
+    border-radius: 15px;
+
+}
+
+.together {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: perspective(900px) rotateY(0deg);
+    transition: 0.5s;
+    transform-style: preserve-3d;
+}
+
+.back-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.308), rgba(0, 0, 0, 0.8)), url(bg3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 15px;
+    transform: perspective(900px) rotateY(180deg);
+}
+
+.sub-container.transformation2 {
+    transform: perspective(900px) rotateY(180deg);
+
+}
+
+.back-container.transformation {
+    transform: perspective(900px) rotateY(360deg);
+}
+
+.addTruthContainer {
+    width: 100%;
+    height: 95%;
+    display: none;
+    overflow: hidden;
+
+}
+
+.addDearContainer {
+    width: 100%;
+    height: 95%;
+    display: none;
+
+}
+
+#done0 {
+    color: whitesmoke;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 3%;
+    color: black;
+    padding: 8px 25px;
+    font-family: felix tetling;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.addDearContainer h1 {
+    padding-bottom: 10px;
+    font-family: Felix Titling;
+    text-align: center;
+    font-weight: 900;
+    margin-top: 5px;
+    text-shadow: -2px 0 limegreen, 0 2px limegreen, 1px 0 limegreen, 0 -1px limegreen;
+}
+
+.addTruthContainer h1 {
+    padding-bottom: 10px;
+    font-family: Felix Titling;
+    text-align: center;
+    font-weight: 900;
+    margin-top: 5px;
+    text-shadow: -2px 0 limegreen, 0 2px limegreen, 1px 0 limegreen, 0 -1px limegreen;
+}
+
+.addTruthContainer #bor5 {
+    border: 1px solid whitesmoke;
+}
+
+.addDearContainer #bor5 {
+    border: 1px solid whitesmoke;
+}
+
+.input-truth-con {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.input-dare-con {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.input-truth-con input {
+    width: 75%;
+    padding: 10px 20px;
+    outline: none;
+    border-radius: 5px;
+    font-family: Agency fb;
+    font-size: 20px;
+    background-color: transparent;
+    border: 1px solid limegreen;
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+
+.input-dare-con input {
+    width: 75%;
+    padding: 10px 20px;
+    outline: none;
+    border-radius: 5px;
+    font-family: Agency fb;
+    font-size: 20px;
+    background-color: transparent;
+    border: 1px solid limegreen;
+    color: white;
+    text-transform: uppercase;
+
+}
+
+.back-container input::placeholder {
+    color: white;
+}
+
+.input-truth-con button {
+    padding: 10px 20px;
+    border-radius: 2px;
+    background: linear-gradient(limegreen, black);
+    border: 1px inset limegreen;
+    cursor: pointer;
+    color: white;
+    font-family: Agency FB;
+    font-size: 18px;
+}
+
+.input-dare-con button {
+    padding: 10px 20px;
+    border-radius: 2px;
+    background: linear-gradient(limegreen, black);
+    border: 1px inset limegreen;
+    cursor: pointer;
+    color: white;
+    font-family: Agency FB;
+    font-size: 18px;
+}
+
+.inputTruth-text-holder {
+    width: 100%;
+    margin-top: 20px;
+    height: 67%;
+    background-color: rgba(0, 0, 0, 0.767);
+    box-shadow: 0px 1px 40px rgba(50, 205, 50, 0.815) inset;
+    border-radius: 5px;
+    padding: 20px 15px;
+    overflow: auto;
+}
+
+.inputDare-text-holder {
+    width: 100%;
+    margin-top: 20px;
+    height: 67%;
+    background-color: rgba(0, 0, 0, 0.767);
+    box-shadow: 0px 1px 40px rgba(50, 205, 50, 0.815) inset;
+    border-radius: 5px;
+    padding: 20px 15px;
+    overflow: auto;
+}
+
+.inputTruth-text-holder p {
+    color: white;
+}
+
+
+.container-one-div {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.356), rgba(0, 0, 0, 0.356)), url(bg1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    display: none;
+}
+
+.container-one-div #border1 {
+    border: 1px solid whitesmoke;
+}
+
+.container-one-div #text {
+    color: whitesmoke;
+    text-align: center;
+    font-style: italic;
+    padding-top: 5px;
+}
+
+.container-one-div #border2 {
+    border: 1px solid whitesmoke;
+    margin-top: 20px;
+
+}
+
+.container-one-div #italic {
+    text-align: center;
+    color: whitesmoke;
+    font-style: italic;
+}
+
+.container-one-div .con-sub-one {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding: 10px;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.con-sub-one h1 {
+    color: black;
+    font-weight: 900;
+    font-size: 50px;
+    font-family: 'Felix Titling';
+    text-transform: uppercase;
+    text-shadow: -2px 0 limegreen, 0 2px limegreen, 1px 0 limegreen, 0 -1px limegreen;
+}
+
+.con-sub-one h3 {
+    font-family: 'Felix Titling';
+    color: white;
+    font-size: 20px;
+
+}
+
+.container-one-div .con-sub-two {
+    height: 50%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.con-sub-two button {
+    padding: 13px 10px;
+    border-radius: 10px;
+    /* background-color: rgba(0, 0, 0, 0.705); */
+    background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(73, 209, 38, 0.705));
+    color: white;
+    font-weight: 900;
+    font-family: Agency FB;
+    font-size: 18px;
+    cursor: pointer;
+    width: 200px;
+    border: 2px inset rgba(43, 235, 101, 0.712);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* Ending of Container-one-div ################################################################################### */
+
+/* Starting of Container-two-div  ################################################################################### */
+.container-two-div {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.356), rgba(0, 0, 0, 0)), url(play1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    display: none;
+}
+ #herro{
+    display: none;
+}
+
+.container-two-div #border3 {
+    border: 1px solid whitesmoke;
+}
+
+.container-two-div #warning {
+    text-align: center;
+    font-style: italic;
+    color: whitesmoke;
+}
+
+.container-two-div .con-sub-two {
+    width: 100%;
+    text-align: center;
+}
+
+.con-sub-two h1 {
+    color: black;
+    font-weight: 900;
+    font-size: 50px;
+    font-family: 'Felix Titling';
+    text-transform: uppercase;
+    text-shadow: -2px 0 limegreen, 0 2px limegreen, 1px 0 limegreen, 0 -1px limegreen;
+}
+
+.con-sub-two h3 {
+    font-family: 'Felix Titling';
+    color: white;
+    font-size: 20px;
+}
+
+.con-sub-two-input-con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    /* border: 2px solid red; */
+}
+
+.con-sub-two-input-con p {
+    color: white;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.con-sub-two-input-con .sub-input {
+    width: 60px;
+    align-self: flex-end;
+}
+
+.sub-input input {
+    background-color: transparent;
+    width: 100%;
+    padding: 10px 5px;
+    outline: none;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 2px limegreen;
+    font-weight: 900;
+    font-size: 17px;
+    font-family: sans-serif;
+    border: 1px solid limegreen;
+    /* background-color: whitesmoke; */
+}
+
+.container-two-div>#add {
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 900;
+    border: 1px solid limegreen;
+    cursor: pointer;
+    color: whitesmoke;
+    font-family: Agency FB;
+    font-size: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.61), rgba(69, 219, 32, 0.705));
+
+}
+
+.container-two-div>#let-play {
+    width: 120px;
+    background: linear-gradient(rgba(69, 219, 32, 0.63), rgba(0, 0, 0, 0.938));
+    font-family: Agency FB;
+    color: whitesmoke !important;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 5px 15px;
+    border: 1px solid limegreen;
+    cursor: pointer;
+    font-weight: 900;
+    margin-top: 10px;
+
+}
+
+.container-two-div .input-conteiner-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 100%;
+    /* padding: 15px; */
+    /* border: 2px solid red; */
+    height: 210px;
+    overflow-y: auto;
+    margin-top: 10px;
+    /* background-color: rgba(0, 0, 0, 0.932); */
+}
+
+.input-conteiner-holder input {
+    width: 100%;
+    outline: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-bottom: 7px;
+    border: 2px solid limegreen;
+    background-color: transparent;
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
+    text-shadow: -1px 0 limegreen, 0 1px limegreen, 1px 0 limegreen, 0 -1px limegreen;
+}
+
+.input-conteiner-holder input::placeholder {
+    color: #fff;
+}
+
+.input-conteiner-holder input:last-child {
+    margin-bottom: 0px !important;
+}
+
+.container-two-div #let-play {
+    background-color: limegreen;
+    color: black;
+    position: absolute;
+    bottom: 1%;
+}
+
+/* Ending of Container-two-div ###################################################################################  */
+
+/* Starting of Container-three-div ###################################################################################  */
+
+.container-three-div {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.315), rgba(0, 0, 0, 0.39)), url(fear3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: none;
+}
+
+.container-three-div #border4 {
+    border: 1px solid whitesmoke !important;
+}
+
+.container-three-div #name2 {
+    color: white;
+    text-align: center;
+    font-family: Felix Titling;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.con-sub-three {
+    width: 100%;
+    text-align: center;
+    padding: 15px 20px;
+}
+
+.con-sub-three h1 {
+    color: black;
+    font-weight: 900;
+    font-size: 50px;
+    font-family: 'Felix Titling';
+    text-transform: uppercase;
+    text-shadow: -2px 0 limegreen, 0 2px limegreen, 1px 0 limegreen, 0 -1px limegreen;
+}
+
+.con-sub-three h2 {
+    font-family: 'Felix Titling';
+    color: white;
+    font-size: 20px;
+}
+
+
+
+.container-three-div .truthOrDear-minibox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 80px;
+
+}
+
+.truthOrDear-minibox button:not(:last-child) {
+    background-color: transparent;
+    text-align-last: center;
+    font-family: Agency FB;
+    font-weight: 900;
+    padding: 18px 0px;
+    width: 280px;
+    font-size: 30px;
+    opacity: 1;
+    transition: oapcity 0.8s;
+    cursor: pointer;
+    color: whitesmoke;
+    border-radius: 10px;
+    border: 2px inset rgba(255, 255, 255, 0.712);
+    background: linear-gradient(rgba(217, 224, 216, 0.63), rgba(0, 0, 0, 0.938));
+
+}
+
+.truthOrDear-minibox button:not(:first-child) {
+    /* background-color: red; */
+    text-align-last: center;
+    font-family: Agency FB;
+    font-weight: 900;
+    padding: 18px 0px;
+    width: 280px;
+    font-size: 30px;
+    opacity: 0.9;
+    transition: oapcity 0.8s;
+    cursor: pointer;
+    background-color: transparent;
+    background: linear-gradient(rgba(219, 32, 32, 0.63), rgba(0, 0, 0, 0.938));
+    color: whitesmoke;
+    border-radius: 10px;
+    border: 2px inset rgba(228, 20, 20, 0.712);
+}
+
+.truthOrDear-minibox h3 {
+    color: limegreen;
+    text-align: center;
+    font-family: Felix Titling;
+    padding: 10px 0px;
+    font-size: 20px;
+}
+
+/* Starting of Container-three-div ###################################################################################  */
+.container-four-div {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.486), rgba(0, 0, 0, 0.178)), url(fear4.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 30px;
+    display: none;
+}
+
+.container-four-div .con-sub-four {
+    /* height: 70%; */
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 10px;
+
+
+}
+
+.con-sub-four>p {
+    position: absolute;
+    bottom: 5%;
+    left: 0%;
+    font-weight: 900;
+    font-size: 50px;
+    text-shadow: 0px 1px grey;
+    opacity: 0.1;
+    text-transform: uppercase;
+    text-shadow: 1px 1px white, 4px 4px black;
+    ;
+}
+
+.container-four-div .con-sub-four h2 {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: max-content;
+    margin: auto;
+    padding-top: 20px;
+    font-family: Felix Titling;
+    font-size: 20px;
+    /* text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red; */
+    width: 100%;
+}
+
+.con-sub-four .question-text {
+    color: black;
+    margin: auto;
+    margin-top: 50px;
+    width: 100%;
+    font-size: 20px;
+    padding: 0px 30px;
+}
+
+.question-text p {
+    color: whitesmoke;
+    padding: 20px 10px;
+    font-family: Agency FB;
+    font-size: 30px;
+    width: 100%;
+    height: 200px;
+
+}
+
+.container-four-div .acceptOr-not-container {
+    /* border: 2px solid yellow; */
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.acceptOr-not-container button {
+    width: 130px;
+    padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+.acceptOr-not-container button:not(:last-child) {
+    background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(73, 209, 38, 0.705));
+    border: 2px inset limegreen;
+    cursor: pointer;
+    color: whitesmoke;
+    font-family: Felix Titling;
+    z-index: 99;
+}
+
+.acceptOr-not-container button:not(:first-child) {
+    background-color: red;
+    cursor: pointer;
+
+    background: linear-gradient(#ff2f2cc2, black);
+    border: 2px inset #ED2B28;
+    color: whitesmoke;
+    font-family: Felix Titling;
+    z-index: 99;
+}
+
+.same {
+    display: none;
+}
+
+.punishment-general-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(punish.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    visibility: hidden;
+    padding: 30px 10px;
+    z-index: 9999999999999999999999999999999999;
+}
+
+.punishment-general-container .sub-punishment-container {
+    width: 100%;
+
+    height: 100px;
+
+
+    /* border: 3px inset red; */
+}
+
+
+.sub-punishment-container p {
+    /* font-size: 20px; */
+    color: white;
+    text-align: center;
+    font-family: Agency FB;
+    font-weight: 500;
+    font-family: 'Felix Titling';
+    text-shadow: 0px 1px limegreen, 0px -1px limegreen;
+    text-transform: capitalize;
+    border-bottom: 2px solid whitesmoke;
+}
+
+.parent1 {
+    display: flex;
+    visibility: visible;
+}
+
+.punishment-general-container .punishment-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    margin-top: 120px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-family: Felix Titling;
+    transform: scale(0);
+    transition: transform 0.8s, opacity 0.8s;
+    opacity: 0;
+    transition-delay: 0.8s;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px 15px;
+    box-shadow: 0px 0px 40px rgba(50, 205, 50, 0.671) inset;
+}
+
+.punishment-text.transform {
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.8s;
+}
+
+.punishment-general-container button {
+    position: absolute;
+    left: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    width: 80px;
+    bottom: 5%;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(73, 209, 38, 0.705));
+    color: white;
+    font-weight: 900;
+    font-family: Agency FB;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100px;
+    border: 2px inset rgba(43, 235, 101, 0.712);
+    text-transform: uppercase;
+}
+
+.gameRules-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.61)), url(fear5.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    clip-path: circle(0% at center);
+    transition: 0.8s linear;
+    border-radius: 10px;
+    /* border: 10px solid whitesmoke; */
+}
+
+.gameRules-container.clipat-active {
+    clip-path: circle(100% at center);
+
+}
+
+.gameRules-container h1 {
+    padding-bottom: 10px;
+    font-family: Felix Titling;
+    text-align: center;
+    font-weight: 900;
+    margin-top: 5px;
+    text-shadow: -2px 0 limegreen, 0 2px limegreen, 1px 0 limegreen, 0 -1px limegreen;
+}
+
+.rules-text-container {
+    width: 100%;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.767);
+    box-shadow: 0px 1px 40px rgba(50, 205, 50, 0.815) inset;
+    border-radius: 5px;
+    padding: 20px 20px;
+    height: 380px;
+    color: white;
+    font-family: Agency FB;
+    font-size: 21px;
+    overflow-y: auto;
+}
+
+.rules-text-container h3 {
+    text-decoration: underline;
+    margin: 10px 0px;
+    text-shadow: -2px 0 limegreen, 0 2px limegreen, 1px 0 limegreen, 0 -1px limegreen;
+    color: black;
+
+}
+
+.rules-text-container p {
+    text-align: justify;
+}
+
+.rules-text-container p b {
+    color: red;
+}
+
+.rules-text-container p i {
+    color: yellow;
+}
+
+.rules-text-container>#ik1 {
+    margin-top: 40px;
+    color: limegreen;
+}
+
+.gameRules-container #bor6 {
+    border: 1px solid white;
+}
+
+.gameRules-container button {
+    position: absolute;
+    bottom: 3%;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(limegreen, black);
+    border: 1px inset green;
+}
+
+ol {
+    padding-left: 30px;
+}
+
+ol li {
+    color: white;
+    margin-bottom: 15px;
+    font-family: Agency FB;
+    font-size: 18px;
+    margin-left: 10px;
+    padding-left: 10px;
+    text-transform: uppercase;
+    /* padding-left: 10px; */
+}
+ol button{
+    user-select: none;
+}
+
+.parentDiv {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.parentDiv button {
+    border: 1px inset red;
+    background-color: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.parentDiv li {
+    max-width: 80%;
+    padding-top: 10px;
+
+}
+.transform5{
+    /* display: none; */
+    transition:  1s linear;
+    transform: translateX(-100%) ;
+    opacity: 0;
+    /* clip-path: circle(at 0% left ); */
+}
+.transform6{
+    transform: translateX(0%) ;
+    /* clip-path: circle(at 100% right ); */
+    opacity: 1;
+    transition: 1s;
+}
+

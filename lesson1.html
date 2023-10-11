@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: auto;
+    }
+    .div{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    button{
+        cursor: pointer;
+        font-size: 18px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="div">
+            <button class="player-0" onclick="Game(0)">Player 1</button>
+            <span id="score-0">0</span>
+        </div>
+        <div class="div">
+            <button class="player-0" onclick="Game(1)">Player 1</button>
+            <span id="score-1">0</span>
+        </div>
+        <div class="div">
+            <button class="player-0" onclick="Game(2)">Player 1</button>
+            <span id="score-2">0</span>
+        </div>
+        <div class="div">
+            <button class="player-0" onclick="Game(3)">Player 1</button>
+            <span id="score-3">0</span>
+        </div>
+        <div class="div">
+            <button class="player-0" onclick="Game(4)">Player 1</button>
+            <span id="score-4">0</span>
+        </div>
+    </div>
+<script>
+    const button = document.getElementsByTagName('button')
+    var activePlayer,counter,scores,roundScore;
+    scores = [0,0,0,0,0]
+    activePlayer = 0
+    counter = 0;
+    roundScore = 0;
+    function Game(num){
+        if(num === activePlayer){
+            var randomNum = Math.floor(Math.random() * 6) + 1
+            roundScore += randomNum
+            scores[activePlayer] += roundScore
+            document.getElementById('score-' + activePlayer).textContent = scores[activePlayer]
+            counter++
+            if(counter > 1){
+                activePlayer++
+                counter = 0
+                roundScore = 0
+            }
+            if(activePlayer > button.length - 1){
+                activePlayer = 0
+            }
+            console.log(scores )
+            console.log(randomNum + ' randomNum')
+            console.log(roundScore + ' roundScore')
+        }
+
+    }
+</script>
+</body>
+
+</html>

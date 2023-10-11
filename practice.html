@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button>Try It</button>
+    <div class="text"></div>
+    <script>
+
+       (function(){
+         const inputValue = (function(){
+           return{
+            inputV: function(){
+                return  input = document.querySelector("input")
+            }
+           }
+        })()
+
+        const text = (function(){
+            return{
+                textFunc:function(){
+                    return textSelect = document.querySelector(".text")
+                }
+            }
+        })()
+
+
+        const inputListener = (function(inpVal,te){
+            return{
+                listener: function(){
+                 inpVal.inputV().addEventListener('input', function(){
+                    if(inpVal.inputV().value){
+                        te.textFunc().innerHTML = inpVal.inputV().value
+                    }
+                   })
+                }
+            }
+        })(inputValue,text)
+        inputListener.listener()
+       })()
+       
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .darkmode{
+        background-color: black;
+    }
+</style>
+<body>
+    <button>Change Color</button>
+    <script>
+        let darkMode = localStorage.getItem('darkMode')
+console.log(darkMode)
+        const darkModeToggle = document.querySelector('button')
+
+        const enableDarkMOde = () => {
+            document.body.classList.add("darkmode")
+            localStorage.setItem('darkMode', 'enabled')
+        }
+
+        const disableDarkMode = () => {
+            document.body.classList.remove("darkmode")
+            localStorage.setItem('darkMode', null)
+        }
+        
+        if(darkMode === 'enabled'){
+            enableDarkMOde()
+        }
+        darkModeToggle.addEventListener('click', () => {
+            darkMode = localStorage.getItem('darkMode')
+            if(darkMode !== 'enabled'){
+                enableDarkMOde()
+                console.log(darkMode + 'yes')
+            }else{
+                disableDarkMode()
+                console.log(darkMode + 'no')
+            }
+        })
+    </script>
+</body>
+
+</html> -->

@@ -1,0 +1,238 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="truthOrDare.css">
+</head>
+
+<body>
+
+    <div class="general-container">
+        <!--Starting ################################################################################### -->
+        <div class="sub-container together">
+
+            <!--Starting ################################################################################### -->
+            <div class="container-one-div same">
+                <div class="con-sub-one">
+                    <h1>Truth</h1>
+                    <h3>OR</h3>
+                    <h1>Dare</h1>
+                </div>
+                <p id="border1"></p>
+                <p id="text">- Best game to know you friends -</p>
+                <div class="con-sub-two">
+                    <button id="start_game" onclick="pluseOne(1)">Start Game</button>
+                    <button id="gameRules">Game Rules</button>
+                    <button onclick="adder('.addTruthContainer')" id="truthBtn">Add truth</button>
+                    <button onclick="adder('.addDearContainer')">Add Dare</button>
+
+                </div>
+                <p id="border2"></p>
+                <p id="italic">Created by Ewuru Bright Nnamdi</p>
+            </div>
+            <!--Ending   ################################################################################### -->
+
+            <!--Starting ################################################################################### -->
+            <div class="container-two-div same">
+                <div class="con-sub-two">
+                    <h1>Truth</h1>
+                    <h3>Or</h3>
+                    <h1>Dare</h1>
+                </div>
+                <p id="border3"></p>
+                <div class="con-sub-two-input-con">
+                    <p>Enter The Number of Players</p>
+                    <div class="sub-input">
+                        <input type="number" placeholder="0" id="input" max="20" min="1">
+                    </div>
+                </div>
+                <button id="add">Add</button>
+                <h2 id="herro"> <span id="inperr"></span></h2>
+                <div class="input-conteiner-holder">
+
+                </div>
+                <button id="let-play">Let's Play</button>
+            </div>
+            <!--Ending   ################################################################################### -->
+
+            <!--Starting ################################################################################### -->
+            <div class="container-three-div same">
+                <div class="con-sub-three">
+                    <h1>truth</h1>
+                    <h2>or</h2>
+                    <h1>Dear</h1>
+                </div>
+                <p id="border4"></p>
+                <p id="name2">-It's <span>Ewuru Bright</span> turn- </p>
+                <div class="truthOrDear-minibox">
+                    <button class="box-truth same2">Truth</button>
+                    <h3>Or</h3>
+                    <button class="box-dare same2">Dare</button>
+                </div>
+            </div>
+            <!--Ending   ################################################################################### -->
+
+            <!--Starting ################################################################################### -->
+            <div class="container-four-div same">
+                <div class="con-sub-four">
+                    <p id="selected"></p>
+                    <h2>- <span id="name3">Ewuru Bright</span> -</h2>
+                    <div class="question-text">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="acceptOr-not-container">
+                    <button class="completed">Completed</button>
+                    <button class="forget">Forget</button>
+                </div>
+                <div class="punishment-general-container">
+                    <button>Done</button>
+                    <div class="sub-punishment-container">
+                        <p>
+                            This is the punishment you will face for not doing what you were asked
+                        </p>
+                        <div class="punishment-text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Ending   ################################################################################### -->
+        </div>
+        <!--Ending   ################################################################################### -->
+
+
+        <div class="back-container together">
+            <div class="addTruthContainer">
+                <h1>Add Truth</h1>
+                <p id="bor5"></p>
+                <div class="input-truth-con">
+                    <input type="text" placeholder="Add your Truth" id="truthInp">
+                    <button id="truthSubmit">Submit</button>
+
+                </div>
+                <ol class="inputTruth-text-holder"> </ol>
+            </div>
+
+            <div class="addDearContainer">
+                <h1>Add Dare</h1>
+                <p id="bor5"></p>
+                <div class="input-dare-con">
+                    <input type="text" placeholder="Add your Dare" id="dareInp">
+                    <button id="dareSubmit">Submit</button>
+
+                </div>
+                <ol type="1" class="inputDare-text-holder"></ol>
+            </div>
+            <button id="done0">Back</button>
+        </div>
+
+        <div class="gameRules-container">
+            <h1>Game Rules</h1>
+            <p id="bor6"></p>
+            <div class="rules-text-container">
+                <h3>About the Game Rules / Guide</h3>
+                <p>
+                    The Game rules will guide you on How to play the game without any confusion.
+
+                </p>
+                <h3>How to Add Dare</h3>
+                <p>
+                    If you want to add new Dare on your game you have to write in your input a dare text
+                    and make sure that the text you wrote in your input does not match the on you have on
+                    the list, if so, you will see an error message that says this Item Already exist, and note
+                    that without you writting anything in your input and when you click submit it will not
+                    add a new Dare to your Dare List, instead you will see an error message, if the text
+                    you type in your input does not match the Dare list you will see a successful message
+                    that said, successful added to the Dare list.
+                </p>
+                <h3>How to Add Truth</h3>
+                <p>
+                    If you want to add new Truth on your game you have to write in your input a truth text
+                    and make sure that the text you wrote in your input does not match the on you have on
+                    the list, if so, you will see an error message that says this Item Already exist, and note
+                    that without you writting anything in your input and when you click submit it will not
+                    add a new Truth to your Truth List, instead you will see an error message, if the text
+                    you type in your input does not match the Truth list you will see a successful message
+                    that said, successful added to the Truth list.
+                </p>
+                <h3>Deleting an Item in the Dare List</h3>
+                <p>
+                    If you want to cancel some item in your Dare list you can quickly click on the Add Dare button to
+                    go to the Dare List item and you will see a red button after the dare text by clicking it will
+                    delete that particular item that come's with the button, if the Dare list is empty you will see a
+                    message
+                    saying please insert a Dare List and <b>Note: </b>Without any List in the Truth Item or the Dare
+                    Item,the game will not
+                    be able to start, there must be at least one item in the Truth and Dare list to start the game.
+                </p>
+                <h3>Deleting an Item in the Truth List</h3>
+                <p>
+                    If you want to cancel some item in your Truth list you can quickly click on the Add Truth button to
+                    go to the Truth List item and you will see a red button after the Truth text by clicking it will
+                    delete that particular item that come's with the button, if the Truth list is empty you will see a
+                    message
+                    saying please insert a Truth List and <b>Note: </b>Without any List in the Truth Item and the Dare
+                    Item, the game will not
+                    be able to start, there must be at least one item in the Truth and Dare list to start the game.
+                </p>
+                <h3>How to Add Numbers of Players</h3>
+                <p>
+                    For you to add the number of players, you need to start the game by click on the start Game,
+                    after that you will see a new graphic layout / UI(User Interface), you will see an input with a
+                    number of 2,
+                    you can edit it by typing a number key with your keyboard <b>Note: </b> (It only accept Number, and
+                    the minimum Number
+                    you can put for the number of players is 2 and the Maximum number is 20). So after that you can
+                    click on the add button,
+                    when the add button is been clicked you will see an input been displayed, you have to fill all the
+                    input with
+                    the players name for you to enable the Let's Play button (to progress in playing the game or move to
+                    a
+                    new graphic layout / UI(User Interface) <b>Note: </b> No Players Name should repeat twice else you
+                    will see an erro message
+                    which will tell you player name that repeat twice and the game will not be able to proceed to the
+                    next stage.
+                </p>
+                <h3>How will i know if it is my Turn</h3>
+                <p>
+                    After Clicking the Let's play button you will see a text that said the player name turn which is
+                    above the Truth and
+                    Dare button it said <i>It's Player 1 turn</i> then you click on any of the Truth and Dare button
+                    after that, you will move to be next graphic layout / UI(User Interface) which tell you what to do
+                    or say.
+                    <b>Note: </b> The players name come's out at random, so a player name can come out more that three
+                    times.
+                </p>
+                <h3>What Does it mean for me to click the Completed button</h3>
+                <p>
+                    You clicking the completed button means you have completed what they told you to do, and after that
+                    it will move to
+                    the next-random player turn <b>Note: </b> This means that
+                    you are not involve in any punishment or Paying of money
+                </p>
+                <h3>What Does it mean for me to click the Forget button</h3>
+                <p>
+                    You clicking the Forget button means you have not completed what they told you to do, and this
+                    will lead you to the punishment graphic layout / UI(User Interface), you will see the punishment
+                    message
+                    after completing the punishment task click on the Done button to go to next-random player turn
+                    <b>Note: </b> This means that you are involved in the punishment and Paying of money, this is a
+                    must.
+                </p>
+
+                <div id="ik1">
+                    <i>Hope this Game Rules or Guid help you</i>
+                    <i>Thanks</i>
+                </div>
+            </div>
+            <button id="done02">Back</button>
+        </div>
+    </div>
+    <audio src="scarysound.mp3" loop autoplay muted ></audio>
+    <script src="truthOrDare.js"></script>
+</body>
+
+</html>
